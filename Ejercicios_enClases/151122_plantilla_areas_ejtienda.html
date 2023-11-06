@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+            /*aunque apliquemos margin/padding, la caja no crece*/
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-areas: "header header header header header"
+                "zap zap cam cam aside"
+                "zap zap cam cam aside"
+                "rel rel cal cal aside"
+                "rel rel cal cal aside"
+                "pie pie pie pie aside";
+        }
+
+        header {
+            grid-area: header;
+            /*a cada seccion o id se le asigna un grid area de las que hemos definido antes*/
+            background-color: salmon;
+            display: flex;
+            /*le puedo definir otro distinto al body flex = estilo en linea*/
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            color: white;
+            font-size: 16px;
+        }
+
+        header nav ol {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ol a {
+            color: blue;
+            margin: 3px;
+            text-decoration: none;
+        }
+
+        section img {
+            height: 100px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #zapatillas {
+            grid-area: zap;
+            background: bisque;
+        }
+
+        #camisetas {
+            grid-area: cam;
+            background-color: aqua;
+        }
+
+        #relojes {
+            grid-area: rel;
+            background-color: aquamarine;
+        }
+
+        #calcetines {
+            grid-area: cal;
+            background-color: brown;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: blanchedalmond;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer {
+            grid-area: pie;
+            background-color: chartreuse;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 940px) {
+
+            /*tablet*/
+            body {
+                grid-template-areas: "header header"
+                    "zap cam"
+                    "zap cam"
+                    "rel cal"
+                    "rel cal"
+                    "pie aside";
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+
+            /*móvil*/
+            body {
+                grid-template-areas: "header"
+                    "zap"
+                    "zap"
+                    "cam"
+                    "cam"
+                    "rel"
+                    "rel"
+                    "cal"
+                    "cal"
+                    "pie"
+                    "pie"
+                    "aside";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>TIENDA DIW</h2>
+        <nav id="navegacion">
+            <ol>
+                <li><a href="">Zapatillas</a></li>
+                <li><a href="">Camisetas</a></li>
+                <li><a href="">Relojes</a></li>
+                <li><a href="">Calcetines</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="">Pie</a></li>
+            </ol>
+        </nav>
+    </header>
+    <section id="zapatillas">
+        <img src="img/zapatillas.png">
+        <span>Zapatillas</span>
+    </section>
+    <section id="camisetas">
+        <img src="img/camiseta.png">
+        <span>Camisetas</span>
+    </section>
+    <section id="relojes">
+        <img src="img/reloj-circular.png">
+        <span>Relojes</span>
+    </section>
+    <section id="calcetines">
+        <img src="img/calcetines.png">
+        <span>Calcetines</span>
+    </section>
+    <aside>Contacto</aside>
+    <footer>Pie</footer>
+</body>
+
+</html>

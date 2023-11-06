@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link style="stylesheet" type="text/css" href="grid.css">
+</head>
+
+<body>
+    <section>
+        <div class="row">
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <!--cuando este en pantalla móvil que ocupe 2 columnas, en pantalla table2, y en monitor 2-->
+                <strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, deserunt dolore impedit beatae
+                    tempora nam repudiandae quas cum rerum rem quis iusto sed optio laudantium, esse non omnis debitis.
+                    Veritatis.</strong>
+                <!--etiqueta negrita-->
+            </div>
+            <div class="col-sm-8 col-md-8 col-lg-8">
+                <!--independientemente de la pantalla ocupa 8 columnas-->
+                <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas quos illo itaque ducimus? Totam
+                    impedit aliquam quaerat delectus cum in, eveniet, laudantium exercitationem animi praesentium soluta
+                    harum nostrum. Ipsa, commodi?
+                </h1>
+            </div>
+            <!--faltarían 2 columnas porque hemos dividido en 12-->
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, deserunt dolore impedit beatae
+                    tempora nam repudiandae quas cum rerum rem quis iusto sed optio laudantium, esse non omnis debitis.
+                    Veritatis.</p>
+            </div>
+        </div>
+        <!--En otro row divimos de otra forma-->
+        <div class="row">
+            <div class="col-lg-12 col-md-4 col-sm-12">
+                <!--cuando achicamos la pantalla en monitor ocupa 12, en tablet 4 y en movil 12-->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed nisi voluptatibus tenetur commodi
+                    obcaecati quae, dolore eos animi sapiente in dolorem qui quod ducimus aliquam autem, facilis
+                    architecto eveniet reprehenderit!</p>
+            </div>
+        </div>
+        <!--en la tercera division de la matriz-->
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-12">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed nisi voluptatibus tenetur commodi
+                    obcaecati quae, dolore eos animi sapiente in dolorem qui quod ducimus aliquam autem, facilis
+                    architecto eveniet reprehenderit!</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

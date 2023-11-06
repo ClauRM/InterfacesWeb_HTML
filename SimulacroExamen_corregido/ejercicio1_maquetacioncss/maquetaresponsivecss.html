@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0; /*sin margenes ni padding para evitar scroll*/
+            padding: 0;
+        }
+        html{
+            height: 100%; /*para que ocupe el 100% de la pantalla sin scroll*/
+        }
+        body{
+            height: 100%; /*lo mismo, para que ocupe toda la pantalla*/
+        }
+        .contenedor-principal{
+            height: 100%; /*lo mismo, toda la pantalla*/
+            display: grid;
+            grid-template-areas: /*definimos las areas*/
+            "contenedor1 contenedor1 contenedor1 contenedor1"
+            "contenedor2 contenedor2 contenedor3 contenedor3"
+            "contenedor2 contenedor2 contenedor3 contenedor3"
+            "contenedor2 contenedor2 contenedor4 contenedor4"
+            "contenedor2 contenedor2 contenedor4 contenedor4";
+        }
+        /*definir los nombres que tienen los div en las areas*/
+        .contenedor1{
+            grid-area: contenedor1;
+            background-color: gray;
+        }
+        .contenedor2{
+            grid-area: contenedor2;
+            background-color: black;
+        }
+        .contenedor3{
+            grid-area: contenedor3;
+            background-color: red;
+        }
+        .contenedor4{
+            grid-area: contenedor4;
+            background-color:beige ;
+        }
+        /*asignar el grid areas del contenedor principal en cada pantalla*/
+        @media screen and (max-width:940px){
+            .contenedor-principal{
+                grid-template-areas: 
+                "contenedor1 contenedor2 contenedor2 contenedor3 contenedor3 contenedor4 contenedor4";
+            }            
+        }
+        @media screen and (max-width:760px) {
+            .contenedor-principal{
+                grid-template-areas: 
+                "contenedor2 contenedor3"
+                "contenedor1 contenedor4";
+            }            
+        }
+    </style>
+</head> 
+<body>
+    <div class="contenedor-principal">
+        <div class="contenedor1"></div>
+        <div class="contenedor2"></div>
+        <div class="contenedor3"></div>
+        <div class="contenedor4"></div>
+    </div>
+</body>
+</html>

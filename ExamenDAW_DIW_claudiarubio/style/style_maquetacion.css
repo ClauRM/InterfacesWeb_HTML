@@ -1,0 +1,92 @@
+*{
+    margin: 0; /*sin margenes ni padding para evitar scroll*/
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    height: 100%; /*para que ocupe el 100% de la pantalla sin scroll*/
+}
+body{
+    height: 100%; /*lo mismo, para que ocupe toda la pantalla*/
+}
+a{
+    text-decoration: none; /*quitar el subrayado del enlace*/
+}
+ul{
+    display: flex; /*todo en una misma linea*/
+}
+li{
+    list-style: none; /*quitar la vinieta de la lista*/
+    padding: 2px;
+}
+.contenedor-principal{
+    height: 100%; /*lo mismo, toda la pantalla*/
+    display: grid;
+    grid-template-areas: /*definimos las areas*/
+    "contenedor1 contenedor1 contenedor2 contenedor2 contenedor2"
+    "contenedor3 contenedor3 contenedor4 contenedor4 contenedor5"
+    "contenedor3 contenedor3 contenedor4 contenedor4 contenedor5"
+    "contenedor3 contenedor3 contenedor4 contenedor4 contenedor5"
+    "contenedor3 contenedor3 contenedor4 contenedor4 contenedor5"
+    "contenedor6 contenedor6 contenedor6 contenedor6 contenedor6"
+}
+/*definir los nombres que tienen los div en las areas*/
+.contenedor1{
+    display: flex;
+    justify-content: center;
+    align-items: center; /*los items alineados al centro dentro de su separacion*/
+    grid-area: contenedor1;
+    background-color: black;
+    color: white;
+}
+.contenedor2{
+    grid-area: contenedor2;
+    background-color: white;
+    display: flex; /*todo en una misma linea*/
+    justify-content: center; /*justificado: misma separacion entre todos los elementos*/
+}
+.contenedor3{
+    display: flex;
+    justify-content: center;
+    align-items: center; /*los items alineados al centro dentro de su separacion*/
+    grid-area: contenedor3;
+    background-color: red;
+}
+.contenedor4{
+    display: flex;
+    justify-content: center;
+    align-items: center; /*los items alineados al centro dentro de su separacion*/
+    grid-area: contenedor4;
+    background-color:gray ;
+}
+.contenedor5{
+    display: flex;
+    justify-content: center;
+    align-items: center; /*los items alineados al centro dentro de su separacion*/
+    grid-area: contenedor5;
+    background-color:lightgrey ;
+}
+.contenedor6{
+    display: flex;
+    justify-content: center;
+    align-items: center; /*los items alineados al centro dentro de su separacion*/
+    grid-area: contenedor6;
+    background-color:white ;
+}
+/*asignar el grid areas del contenedor principal en cada pantalla*/
+@media screen and (max-width:940px){
+    
+    .contenedor-principal{
+        grid-template-areas: 
+        "contenedor1 contenedor2 contenedor3 contenedor4 contenedor5 contenedor6";
+    }            
+}
+@media screen and (max-width:760px) {
+    
+    .contenedor-principal{
+        grid-template-areas: 
+        "contenedor1 contenedor2"
+        "contenedor3 contenedor4"
+        "contenedor5 contenedor6";
+    }            
+}

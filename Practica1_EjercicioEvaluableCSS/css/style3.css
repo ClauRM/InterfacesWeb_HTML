@@ -1,0 +1,168 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+}
+html{
+    height: 100%;
+}
+body{/*El ancho y la altura del contenido debe de ser de un 100%*/
+    height: 100%;
+    width: 100%;
+    display: grid;  /*divide la pantalla en una matriz*/
+    grid-template-columns: repeat(1, [col] 1fr);   /*divide la matriz en 1 columna*/
+    grid-template-rows: repeat(12, [row] 1fr);   /*divide la pantalla en 12 filas con tamaño de 1 fraccion de pantalla*/
+    grid-row-gap: 0px;   /*separacion entre fila y fila*/
+    justify-content: center;   /*justificar horizontal su contenido*/
+    margin: 10px;
+}
+/*
+.contenedor {
+    display: grid;  
+    grid-template-columns: repeat(1, [col] 1fr);   
+    grid-template-rows: repeat(12, [row] 1fr);   
+    grid-row-gap: 0px;   
+    justify-content: center;   
+    margin: 30px;
+}
+*/
+
+#header {
+    background-color: blue;
+}
+#nav {
+    background-color: greenyellow;
+}
+#section {
+    background-color: blueviolet;
+}
+#footer {
+    background-color: palevioletred;
+    font-style: oblique;
+}
+
+/*ESTRUCTURA RESPONSIVE CON MEDIA QUERY*/
+
+/*Pantalla de monitor de un ordenador*/
+@media only screen and (min-width: 941px) {
+
+    /*Se repite 12 veces puesto que hemos dividido en 12 filas*/
+    /*Si ocupa 1 será 1, si ocupa 2 será 2...*/
+    .row-lg-1 {
+        grid-row: span 1;
+    }
+    .row-lg-2 {
+        grid-row: span 2;
+    }
+    .row-lg-3 {
+        grid-row: span 3;
+    }
+    .row-lg-4 {
+        grid-row: span 4;
+    }
+    .row-lg-5 {
+        grid-row: span 5;
+    }
+    .row-lg-6 {
+        grid-row: span 6;
+    }
+    .row-lg-7 {
+        grid-row: span 7;
+    }
+    .row-lg-8 {
+        grid-row: span 8;
+    }
+    .row-lg-9 {
+        grid-row: span 9;
+    }
+    .row-lg-10 {
+        grid-row: span 10;
+    }
+    .row-lg-11 {
+        grid-row: span 11;
+    }
+    .row-lg-12 {
+        grid-row: span 12;
+    }
+}
+
+/*Pantalla de tablet*/
+@media only screen and (min-width: 768px) and (max-width:940px) {
+    .row-md-1 {
+        grid-row: span 1;
+    }
+    .row-md-2 {
+        grid-row: span 2;
+    }
+    .row-md-3 {
+        grid-row: span 3;
+    }
+    .row-md-4 {
+        grid-row: span 4;
+    }
+    .row-md-5 {
+        grid-row: span 5;
+    }
+    .row-md-6 {
+        grid-row: span 6;
+    }
+    .row-md-7 {
+        grid-row: span 7;
+    }
+    .row-md-8 {
+        grid-row: span 8;
+    }
+    .row-md-9 {
+        grid-row: span 9;
+    }
+    .row-md-10 {
+        grid-row: span 10;
+    }
+    .row-md-11 {
+        grid-row: span 11;
+    }
+    .row-md-12 {
+        grid-row: span 12;
+    }
+}
+
+/*Pantalla moviles*/
+@media only screen and (max-width: 767px) {
+    .row-sm-1 {
+        grid-row: span 1;
+    }
+    .row-sm-2 {
+        grid-row: span 2;
+    }
+    .row-sm-3 {
+        grid-row: span 3;
+    }
+    .row-sm-4 {
+        grid-row: span 4;
+    }
+    .row-sm-5 {
+        grid-row: span 5;
+    }
+    .row-sm-6 {
+        grid-row: span 6;
+    }
+    .row-sm-7 {
+        grid-row: span 7;
+    }
+    .row-sm-8 {
+        grid-row: span 8;
+    }
+    .row-sm-9 {
+        grid-row: span 9;
+    }
+    .row-sm-10 {
+        grid-row: span 10;
+    }
+    .row-sm-11 {
+        grid-row: span 11;
+    }
+    .row-sm-12 {
+        grid-row: span 12;
+    }
+
+}

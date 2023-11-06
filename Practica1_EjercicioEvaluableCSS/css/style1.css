@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px;
+}
+
+body{
+    min-width: 700px; /*minimo reduccion ancho ventana*/
+}
+
+.contenedor {
+    margin: 10px;
+    padding: 10px;
+}
+
+.cabecera {
+    padding: 10px;
+    background-image: url("../img/fondo.png");
+    height: 20%;
+    color: white;  
+}
+
+header{
+    height: 50px;
+}
+
+nav {
+    text-align: right;
+    font-weight: bold;
+}
+
+.contenido {
+    margin-top: 10px;
+    display: inline-block; /*poner div uno al lado del otro*/
+    width: 100%;
+    height: 60%;
+}
+
+aside {
+    float: left;/*flota a la izquierda del contenedor*/
+    border-style: dotted;/*borde punteado*/
+    width: 15%;
+    height: 300px;
+}
+
+section {
+    float: right;/*flota a la derecha del contenedor*/
+    border-style: solid; /*borde solido*/
+    width: 83%;
+    height: 450px;
+}
+
+section .contenido {
+    margin-left: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    float: left; 
+    border: yellow;
+    border-style: dotted; /*borde punteado*/
+    width: 35%;
+    height: 380px;
+}
+
+section .lateral {
+    margin: 20px;
+    padding: 10px;
+    float: right;
+    border: red;
+    border-style: dotted;
+    width: 35%;
+    height: 380px;
+}
+
+.pie {
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+    height: 20%;
+}
+
+footer {
+    float: left;
+    font-style: oblique; /*cursiva*/
+}
+
+.volver {
+    float: right;
+}

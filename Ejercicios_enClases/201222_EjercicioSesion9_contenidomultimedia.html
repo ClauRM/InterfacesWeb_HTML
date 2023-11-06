@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Javascript Bundle with Popper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="./img//favicon.ico">
+    <style type="text/css">
+        *{
+            margin: 0;
+        }
+        body{
+            background-color: lightgray;
+        }
+        .filtrado{
+            filter: grayscale(58%) sepia(45%);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="d-flex">
+            <div class="container">
+                <h1>DIW</h1>
+                <h3>IMF Capitol</h3>
+            </div>
+        </div>
+    </header>
+    <div class="text-center">
+        <h1 class="mt-4">Primera clase introduciendo imágenes</h1>
+        <h6 class="mt-1 fst-italic">Podemos poner filtros con CSS</h6>
+    </div>
+    <div class="row row-cols-2 mt-4 mb-4 ms-4 me-4">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+            <img class="w-100 h-100" src="./img/coche1.jpg" data-bs-toggle="modal" data-bs-target="#modal1"> <!--bs-target es el modal que va a abrir-->
+            <div class="modal fade" id="modal1"><!--cuando se pinche sobre la imagen va a abrir este modal-->
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <img src="./img/coche1.jpg" class="w-100 h-100">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-warning" data-bs-dismiss="modal">
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-12 mt-3 mt-lg-0 mt-md-0 mt-sm-0">
+        <div class="row justify-content-center row-cols-2">
+            <div class="col-12 mb-3">
+                <img class="w-100 h-100" src="./img/coche2.jpg" data-bs-toggle="modal" data-bs-target="#modal2">
+                <div class="modal fade" id="modal2"><!--cuando se pinche sobre la imagen va a abrir este modal-->
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="./img/coche2.jpg" class="w-100 h-100">
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-warning" data-bs-dismiss="modal">
+                                    Cerrar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--imagen con filtros canvas, photoshop-->
+    <h1 class="text-center mt-5 mb-3">
+        ¡Aplicamos filtros!
+    </h1>
+    <div class="container mb-4 text-center">
+        <img class="justify-content-center w-50" src="./img/collagehot.png" >
+        <img class="justify-content-center w-50 filtrado mt-4" src="./img/collagehot.png">
+        <p class="fst-italic mt-1">Filtrado greyscale + sepia</p>
+    </div>
+    <!--introducir audios y videos-->
+    <div class="row row-cols-2 ms-2 me-2 mt-5 mb-4">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12 align-self-center">
+            <h1 class="text-center">Integrar audios</h1>
+            <h5 class="fst-italic text-center">
+                Primera clase introduciendo audios
+            </h5>
+            <div class="mt-4">
+                <div class="col-12 text-center">
+                    <audio class="col-12 mt-4" controls><!--etiqueta controls-->
+                        <source src="./media/coche.wav" type="audio/wav">
+                        <p class="fst-italic mt-1">Formato wav</p>
+                    </audio>
+                </div>
+                <div class="col-12 text-center">
+                    <audio class="col-12 mt-3" controls><!--depende del navegador permite un formato u otro-->
+                        <source src="./media/cars.mp3" type="audio/mp3">
+                        <p class="fst-italic mt-1">Formato mp3</p>
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--introducir videos-->
+    <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+        <h1 class="text-center">Integrar vídeos</h1>
+        <div class="col-12 text-center">
+            <video class="w-75 h-100" controls>
+                <source src="./media/carreras.mp4" type="video/mp4">
+            </video>
+            <p class="fst-italic mt-1">Formato mp4</p>
+        </div>
+        <!-- track con etiqueta de subtitulos -->
+        <div class="col-12 text-center">
+            <video class="w-75 h-100" controls>
+                <source src="./media/carreras.mp4" type="video/mp4">
+            </video>
+            <p class="fst-italic mt-1">Formato mp4</p>
+        </div>
+    </div>
+</body>
+<!--Introduciendo referencias-->
+<footer class="bg-secondary mt-4 pt-3 pb-4">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="text-white">Referencias</h1><!--tenemos que poner las referencias de donde hemos sacado las imagenes y videos-->
+            <div class="row justify-content-center row-cols-3">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                    <a href="https://www.favicon-generator.org/" class="text-white">Con este enlace se realiza un faviicon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

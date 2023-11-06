@@ -1,0 +1,139 @@
+html{
+    background-color: aqua;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-left: 15px;
+    border-left: 20px;
+}
+.row{
+    display: grid;/*divide la pantalla en una matriz*/
+    grid-template-columns: repeat(12, [col] 1fr); /*divide esta fila en 12 columnas y que todas tengan la misma dimesion*/
+    grid-template-rows: repeat(3, [row] auto);/*divide en 3 filas auto*/
+    grid-row-gap: 15px;/*metemos una separacion entre fila y fila*/
+    justify-content: center;/*justificar horizontal su contenido*/
+    margin-left: 15px;
+    margin-right: 15px;
+}
+/*ESTRUCTURA RESPONSIVE CON MEDIA QUERY*/
+
+/*Pantalla de monitor de un ordenador*/
+@media only screen and (min-width: 941px){
+    /*Se repite 12 veces puesto que hemos dividido en 12*/
+    /*Si ocupa 1 será 1, si ocupa 2 será 2...*/
+   .col-lg-1{
+    grid-column: span 1;
+   } 
+   .col-lg-2{
+    grid-column: span 2;
+   } 
+   .col-lg-3{
+    grid-column: span 3;
+   } 
+   .col-lg-4{
+    grid-column: span 4;
+   } 
+   .col-lg-5{
+    grid-column: span 5;
+   } 
+   .col-lg-6{
+    grid-column: span 6;
+   } 
+   .col-lg-7{
+    grid-column: span 7;
+   } 
+   .col-lg-8{
+    grid-column: span 8;
+   } 
+   .col-lg-9{
+    grid-column: span 9;
+   } 
+   .col-lg-10{
+    grid-column: span 10;
+   } 
+   .col-lg-11{
+    grid-column: span 11;
+   } 
+   .col-lg-12{
+    grid-column: span 12;
+   } 
+}
+
+/*Pantalla de tablet*/
+@media only screen and (min-width: 768px) and (max-width:940px){
+   .col-md-1{
+    grid-column: span 1;
+   } 
+   .col-md-2{
+    grid-column: span 2;
+   } 
+   .col-md-3{
+    grid-column: span 3;
+   } 
+   .col-md-4{
+    grid-column: span 4;
+   } 
+   .col-md-5{
+    grid-column: span 5;
+   } 
+   .col-md-6{
+    grid-column: span 6;
+   } 
+   .col-md-7{
+    grid-column: span 7;
+   } 
+   .col-md-8{
+    grid-column: span 8;
+   } 
+   .col-md-9{
+    grid-column: span 9;
+   } 
+   .col-md-10{
+    grid-column: span 10;
+   } 
+   .col-md-11{
+    grid-column: span 11;
+   } 
+   .col-md-12{
+    grid-column: span 12;
+   } 
+}
+
+/*Pantalla moviles*/
+@media only screen and (max-width: 767px){
+   .col-sm-1{
+    grid-column: span 1;
+   } 
+   .col-sm-2{
+    grid-column: span 2;
+   } 
+   .col-sm-3{
+    grid-column: span 3;
+   } 
+   .col-sm-4{
+    grid-column: span 4;
+   } 
+   .col-sm-5{
+    grid-column: span 5;
+   } 
+   .col-sm-6{
+    grid-column: span 6;
+   } 
+   .col-sm-7{
+    grid-column: span 7;
+   } 
+   .col-sm-8{
+    grid-column: span 8;
+   } 
+   .col-sm-9{
+    grid-column: span 9;
+   } 
+   .col-sm-10{
+    grid-column: span 10;
+   } 
+   .col-sm-11{
+    grid-column: span 11;
+   } 
+   .col-sm-12{
+    grid-column: span 12;
+   } 
+}

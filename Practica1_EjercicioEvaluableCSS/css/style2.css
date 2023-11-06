@@ -1,0 +1,71 @@
+* {
+    /*quitamos margenes a todos los elementos*/
+    padding: 0%;
+    margin: 0%;
+}
+
+.navegacion {
+    margin-top: 2%;    /*margen superior - distancia al borde de la pagina*/
+    margin-left: 5%;    /*margen izquierdo*/
+    max-width: 150px; /*ancho del menú*/
+    border-style: none dotted dotted dotted;  /*borde de todo el panel superior none, derecho-inferior-derecho punteado*/
+}
+
+.navegacion a{
+    display: flex; /*para que el enlace a ocupe todo el espacio contenedor navegacion en el que se encuentra*/
+    align-items: flex-end; /*alinear items -texto en este caso- al fondo inferior del div*/
+    background-color: bisque;
+    text-decoration: none;   /*quitar subrayado*/
+    border-style: dotted none none none; /*en cada enlace, borde de todo el panel superior es punteado, y el resto none*/
+}
+
+.navegacion img{
+    height: 25px;
+    width: 25px;
+    margin-right: 4%;
+    background-size: cover; /*Ajusta imagen al tamaño del contenedor*/
+}
+
+/*ELEMENTOS Y PROPIEDADES QUE TENDRA EL MENU DE NAVEGACION POR DEFECTO*/
+/*UTILIZANDO :nth-child(an+b) 
+a – es el ciclo
+n – es el contador, empezando en 0
+b – es el valor del offset, es decir, a partir de qué elemento empezamos a contar.
+*/
+
+a img:nth-child(n+2){
+    display: none; /*oculta todas las imagenes a partir de la segunda*/
+}
+
+/*ELEMENTOS AL HACER HOVER - PASAR EL RATON*/
+
+a:hover{
+    background-color:blue; /*cambia el color de fondo a azul*/
+}
+
+a:hover img:nth-child(2n+1){
+    display: none; /*oculta imagenes cada 2 elementos empezando por el 1*/
+}
+
+a:hover img:nth-child(2n){
+    display: block; /*muestra imagenes cada 2 elementos empezando por el 0*/
+}
+
+/*ELEMENTOS AL HACER CLICK */
+
+a:active{
+    color:red;
+}
+
+a:active img:nth-child(-n+2){
+    display: none; /*oculta todas las imagenes menos la ultima*/
+}
+
+a:active img:nth-child(3n){
+    display: block; /*muestra imagenes cada 3 elementos empezando por el 0*/
+}
+
+/*PIE PARA VOLVER AL MENU PRINCIPAL*/
+.pie {
+    margin-left: 5%; /*separacion del margen izquierdo de la pagina*/
+}

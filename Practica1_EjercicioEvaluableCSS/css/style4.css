@@ -1,0 +1,49 @@
+*{
+    text-align: center;
+    box-sizing: border-box; /*aunque apliquemos margin/padding, la caja no crece*/
+}
+html {
+    height: 100%; /*que el alto de la página sea 100% de la pantalla*/
+}
+body{
+    /*para que ocupe el 100% de la pantalla, las propiedades se las tenemos que dar al body*/
+    width: 100%; /*que la pagina ocupe toda la pantalla de alto y ancho*/
+    height: 100%;
+    display: grid;/*para dividir la pantalla por areas*/
+    grid-template-areas: /*nombres del grid-area de cada div*/
+    "header header header header"
+    "header header header header"
+    "nav nav nav nav"
+    "izq izq der der"
+    "izq izq der der"
+    "izq izq der der"
+    "pie pie pie pie";
+}
+
+#cabecera{
+    background-color: aqua;
+    grid-area: header; /*nombre que tendra el div en el grid-template-areas*/
+}
+#navegacion{
+    background-color: greenyellow;
+    grid-area: nav;
+}
+#izquierda{
+    background-color: brown;
+    grid-area: izq;
+    display: flex;
+    justify-content: center;/*centrar horizontalmente*/
+    align-items: center;/*centrar verticalmente*/
+}
+#derecha{
+    background-color: burlywood;
+    grid-area: der;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pie{
+    background-color: olive;
+    grid-area: pie;
+    font-style: oblique;
+}

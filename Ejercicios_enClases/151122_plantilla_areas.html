@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        /*estilo css interno pero lo correcto es siempre externo*/
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        #contenedor {
+            display: grid;
+            /*para dividir en areas*/
+            grid-template-areas: "header header header header"
+                "contenido1 contenido1 contenido2 contenido2"
+                "contenido1 contenido1 contenido2 contenido2"
+                "contenido1 contenido1 contenido2 contenido2"
+                "pie pie pie pie";
+        }
+
+        #cabecera {
+            background-color: aquamarine;
+            grid-area: header;
+        }
+
+        #izquierda {
+            background-color: brown;
+            grid-area: contenido1;
+        }
+
+        #derecha {
+            background-color: blueviolet;
+            grid-area: contenido2;
+        }
+
+        #despedida {
+            background-color: burlywood;
+            grid-area: pie;
+        }
+
+        /*ahora hacerlo responsive repetimos todo dentro del media query con lo que queremos que ocupe*/
+        @media screen and (max-width:767px) {
+            #contenedor {
+                grid-template-areas: "header header header header"
+                    "contenido1 contenido1 contenido1 contenido1"
+                    "contenido1 contenido1 contenido1 contenido1"
+                    "contenido2 contenido2 contenido2 contenido2"
+                    "pie pie pie pie";
+            }
+
+            #cabecera {
+                background-color: aquamarine;
+                grid-area: header;
+            }
+
+            #izquierda {
+                background-color: brown;
+                grid-area: contenido1;
+            }
+
+            #derecha {
+                background-color: blueviolet;
+                grid-area: contenido2;
+            }
+
+            #despedida {
+                background-color: burlywood;
+                grid-area: pie;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+        <div id="cabecera">
+            <h2>Título</h2>
+        </div>
+        <div id="izquierda">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, ex id repudiandae illum consectetur
+                officiis ducimus aperiam accusamus voluptates deleniti aspernatur ipsam, distinctio placeat at earum?
+                Deserunt quia molestias quam?</p>
+        </div>
+        <div id="derecha">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt animi ut enim possimus nobis, dolore
+                quos at saepe accusamus aliquid voluptatem repudiandae delectus quod consequatur non neque placeat, eius
+                laboriosam.</p>
+        </div>
+        <div id="despedida">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti deserunt quae accusantium adipisci
+                consectetur, et possimus. Repellat, modi. Obcaecati cupiditate magni praesentium ut exercitationem
+                voluptatum eligendi, in eos. Officiis, ea?</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    /*sin margenes ni padding para evitar scroll*/
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    /*para que ocupe el 100% de la pantalla sin scroll*/
+}
+
+body {
+    height: 100%;
+    /*lo mismo, para que ocupe toda la pantalla*/
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+}
+
+#imagenBig {    
+    height: 300px;
+    width: auto;
+}
+#imagenPeq img{
+    width: 80px;
+}
